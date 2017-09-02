@@ -1,0 +1,137 @@
+<!--
+* Copyright 2016 Carlos Eduardo Alfaro Orellana
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Lotes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/book.ico" />
+    <script src="js/sweet-alert.min.js"></script>
+    <link rel="stylesheet" href="css/sweet-alert.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="navbar-lateral full-reset">
+    <div class="visible-xs font-movile-menu mobile-menu-button"></div>
+    <div class="full-reset container-menu-movile custom-scroll-containers">
+        <div class="logo full-reset all-tittles">
+            <i class="visible-xs zmdi zmdi-close pull-left mobile-menu-button" style="line-height: 55px; cursor: pointer; padding: 0 10px; margin-left: 7px;"></i>
+            Sistema de la finca
+        </div>
+        <div class="full-reset" style="background-color:#2B3D51; padding: 10px 0; color:#fff;">
+            <figure>
+                <img src="assets/img/logo.png" alt="Biblioteca" class="img-responsive center-box" style="width:55%;">
+            </figure>
+            <p class="text-center" style="padding-top: 15px;">Sistema de la finca</p>
+        </div>
+        <div class="full-reset nav-lateral-list-menu">
+            <ul class="list-unstyled">
+                <li><a href="home.html"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
+                <li><a href="insumos.html"><i class="zmdi zmdi-truck zmdi-hc-fw"></i>&nbsp;&nbsp; Registrar Insumos</a></li>
+                <li><a href="Lote.html"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo lote</a></li>
+                <li>
+                <li><a href="personal.html"><i class="zmdi zmdi-face zmdi-hc-fw"></i>&nbsp;&nbsp; Registrar ganadero</a></li>
+                <li><a href="Novillo.html"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Registrar Novillo</a></li>
+                <li><a href="advancesettings.html"><i class="zmdi zmdi-wrench zmdi-hc-fw"></i>&nbsp;&nbsp; Configuraciones avanzadas</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content-page-container full-reset custom-scroll-containers">
+    <nav class="navbar-user-top full-reset">
+        <ul class="list-unstyled full-reset">
+            <li  class="tooltips-general exit-system-button" data-href="index.html" data-placement="bottom" title="Salir del sistema">
+                <i class="zmdi zmdi-power"></i>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="page-header">
+            <h1 class="all-tittles">Sistema de la finca <small>Inicio</small></h1>
+        </div>
+    </div>
+    <section class="full-reset text-center" style="padding: 40px 0;">
+        <article class="tile">
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-face"></i></div>
+            <div class="tile-name all-tittles">Ganaderos</div>
+            <div class="tile-num full-reset">7</div>
+        </article>
+        <article class="tile">
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-truck"></i></div>
+            <div class="tile-name all-tittles">Insumos</div>
+            <div class="tile-num full-reset">21</div>
+        </article>
+        <article class="tile">
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-bookmark-outline"></i></div>
+            <div class="tile-name all-tittles">Lotes</div>
+            <div class="tile-num full-reset">11</div>
+        </article>
+        <article class="tile">
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-bookmark-outline"></i></div>
+            <div class="tile-name all-tittles">Novillos</div>
+            <div class="tile-num full-reset">11</div>
+        </article>
+    </section>
+</div>
+<div class="content-page-container full-reset custom-scroll-containers">
+
+    <div class="container">
+        <div class="page-header">
+            <h1 class="all-tittles">Sistema de la finca <small>Registro Insumos</small></h1>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 lead">
+                <ol class="breadcrumb">
+                    <li class="active">Nuevo lote</li>
+                    <li><a href="listInsumos.html">Listado de lotes</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container-flat-form">
+            <div class="title-flat-form title-flat-blue">Agregar un nuevo Insumo</div>
+            <form autocomplete="off"  class="form-label-left" action="../controlador/LoteCtrl.php?action=crear" method="post">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                        <div class="group-material">
+                            <input type="text" id="Codigo" name="Codigo" class="material-control tooltips-general" placeholder="Codigo del Insumo" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el Codigo del lote">
+                            <label>Codigo del lote</label>
+                        </div>
+                        <div class="group-material">
+                            <input type="text" id="FechaCompra" name="FechaCompra"class="material-control tooltips-general" placeholder="FechaCompra del Insumo" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe el Fecha Compra del lote">
+                            <label>Fecha de Compra del lote</label>
+                        </div>
+                        <div class="group-material">
+                            <input type="text" id="Estado" name="Estado" class="material-control tooltips-general" placeholder="Estado del Insumo" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Escribe la Estado del lote">
+                            <label>Estado del lote</label>
+                        </div>
+                        <div class="group-material">
+                            <input type="text" id="Valor" name="Valor" class="material-control tooltips-general" placeholder="Valor del Insumo" required="" maxlength="50" data-toggle="tooltip" data-placement="top" title="Valor del Insumo">
+                            <label>Valor del lote</label>
+                        </div>
+                        <p class="text-center">
+                            <button type="submit" class="btn btn-primary"><i class="zmdi zmdi-floppy"></i> &nbsp;&nbsp; Guardar</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
